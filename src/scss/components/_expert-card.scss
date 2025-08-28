@@ -1,0 +1,40 @@
+.expert-card {
+	&__body {
+		display: grid;
+		grid-template-columns: 1fr 450px;
+	}
+	&__content {
+	}
+	&__anonse {
+		padding: 52px 67px;
+		background: #eaf3fa;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 100px;
+	}
+	&__title {
+		color: $color-title;
+		font-family: BebasNeueCyrillic;
+		font-size: 32px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 130%;
+		letter-spacing: 0.96px;
+	}
+	&__feedback {
+	}
+	&__descr {
+		padding: 40px 75px 0 0;
+	}
+	&__avatar {
+	}
+	&__media {
+	}
+	&__btns {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+		padding: 25px 0 0 0;
+	}
+}

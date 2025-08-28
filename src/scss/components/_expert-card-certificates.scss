@@ -1,0 +1,7 @@
+.expert-card-certificates {
+	&__body {
+		display: grid;
+		grid-template-columns: 1fr 450px;
+		gap: 25px;
+	}
+}

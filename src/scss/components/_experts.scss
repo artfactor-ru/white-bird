@@ -5,6 +5,12 @@
 	}
 	&__slide {
 	}
+
+	&__body {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 25px;
+	}
 }
 
 .expert {

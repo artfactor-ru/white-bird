@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Карточка врача"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+            @@include('html/components/_breadcrumbs.htm',{
+            "title":"Карточка врача"
+            })
+            @@include('html/components/_expert-card.htm',{})
+            @@include('html/components/_expert-card-certificates.htm',{})
+            @@include('html/components/_feedback.htm',{})
+            @@include('html/components/_main-contacts.htm',{})
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>
