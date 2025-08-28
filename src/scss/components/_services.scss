@@ -1,0 +1,73 @@
+.services {
+	&__body {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 30px;
+	}
+	&__item {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+
+		@media (any-hover: hover) {
+			&:hover {
+				.content {
+					span {
+						color: #20f0ff;
+					}
+				}
+
+				.media {
+					picture {
+						transform: scale(1.05);
+					}
+				}
+			}
+		}
+		.media {
+			flex: 0 0 auto;
+			overflow: hidden;
+
+			picture {
+				transition: all 0.3s ease 0s;
+				height: 380px;
+			}
+		}
+		.content {
+			flex: 1 0 auto;
+			display: flex;
+			flex-direction: column;
+			padding: 17px 0;
+			span {
+				margin-top: 15px;
+				color: #20b2ff;
+				font-size: 24px;
+				font-style: normal;
+				font-weight: 300;
+				line-height: 140%;
+				letter-spacing: 0.72px;
+				transition: all 0.3s ease 0s;
+			}
+		}
+		.box {
+			margin-bottom: auto;
+		}
+		.name {
+			color: $color-title;
+			font-family: BebasNeueCyrillic;
+			font-size: 25px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 120%;
+			letter-spacing: 0.75px;
+			margin-bottom: 5px;
+		}
+		.exerpt {
+			font-size: 24px;
+			font-style: normal;
+			font-weight: 300;
+			line-height: 140%;
+			letter-spacing: 0.72px;
+		}
+	}
+}

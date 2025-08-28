@@ -1,0 +1,45 @@
+.sales {
+	&__body {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 30px;
+	}
+	&__item {
+		border-radius: 3px;
+		border: 1px solid #eaf3fa;
+		background: #fff;
+		display: flex;
+		flex-direction: column;
+	}
+	&__media {
+		flex: 0 0 auto;
+		picture {
+			height: 320px;
+		}
+	}
+	&__content {
+		padding: 24px 32px 32px 32px;
+		flex: 1 0 auto;
+		display: flex;
+		flex-direction: column;
+		.name {
+			margin-bottom: auto;
+			color: $mainColor;
+			font-size: 24px;
+			font-style: normal;
+			font-weight: 300;
+			line-height: 140%;
+			letter-spacing: 0.72px;
+		}
+		.price {
+			margin-top: 15px;
+			color: $color-title;
+			font-family: BebasNeueCyrillic;
+			font-size: 40px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 150%;
+			text-transform: uppercase;
+		}
+	}
+}

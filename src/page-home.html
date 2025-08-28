@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 @@include('html/_head.htm',{
-"title":"HomePage"
+"title":"Главная"
 })
 
 <body>
@@ -9,8 +9,16 @@
         @@include('html/_header.htm',{})
         <main class="page">
             @@include('html/components/_hero.htm',{})
-
+            @@include('html/components/_main-experts.htm',{})
+            @@include('html/components/_main-price.htm',{})
+            @@include('html/components/_main-sales.htm',{})
+            @@include('html/components/_main-questions.htm',{})
+            @@include('html/components/_main-services.htm',{})
+            @@include('html/components/_feedback.htm',{})
+            @@include('html/components/_main-stories.htm',{})
+            @@include('html/components/_main-contacts.htm',{})
         </main>
+
         @@include('html/_footer.htm',{})
     </div>
     @@include('html/_js.htm',{})
