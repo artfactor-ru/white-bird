@@ -10,6 +10,10 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 25px;
+
+		@media (max-width: 1360px) {
+			grid-template-columns: repeat(1, 1fr);
+		}
 	}
 }
 
@@ -86,7 +90,7 @@
 			line-height: 140%;
 			letter-spacing: 0.72px;
 			transition: all 0.3s ease 0s;
-
+			margin-top: 15px;
 			@media (max-width: 1740px) {
 				font-size: 18px;
 			}

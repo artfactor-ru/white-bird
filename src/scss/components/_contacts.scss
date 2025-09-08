@@ -270,6 +270,10 @@
 					color: #9da5b7;
 				}
 			}
+
+			@media (max-width: $mobile) {
+				font-size: 20px;
+			}
 		}
 	}
 	&__body {
@@ -280,5 +284,12 @@
 		@media (max-width: 1740px) {
 			height: 450px;
 		}
+	}
+}
+
+.page-contacts {
+	padding: 0 0 40px 0;
+	.contacts__slide {
+		padding: 0;
 	}
 }

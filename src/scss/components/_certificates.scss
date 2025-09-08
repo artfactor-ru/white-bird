@@ -1,6 +1,10 @@
 .certificates {
 	min-width: 0;
 	padding-left: 80px;
+
+	@media (max-width: 1360px) {
+		padding-left: 0;
+	}
 	&__slider {
 	}
 	&__wrapper {

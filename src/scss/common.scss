@@ -11,6 +11,10 @@
 		align-items: center;
 		gap: 10px;
 		margin-bottom: 30px;
+
+		@media (max-width: $mobile) {
+			margin-bottom: 25px;
+		}
 		.btns {
 			display: flex;
 			gap: 10px;
@@ -49,6 +53,7 @@
 		}
 	}
 }
+
 .title {
 	display: flex;
 	gap: 30px;
@@ -577,6 +582,7 @@ th {
 [data-editor] h6 {
 	color: $color-title;
 	font-family: BebasNeueCyrillic;
+	line-height: 130%;
 }
 [data-editor] h1 {
 	font-size: 30px;
