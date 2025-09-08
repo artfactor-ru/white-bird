@@ -29,6 +29,15 @@
 	font-style: normal;
 	font-weight: 300;
 	line-height: 160%;
+
+	@media (max-width: 1360px) {
+		font-size: 30px;
+		padding: 8px 0px;
+	}
+
+	@media (max-width: $mobile) {
+		font-size: 26px;
+	}
 	._spoller-init & {
 		cursor: pointer;
 		.spollers__icon {
@@ -37,6 +46,10 @@
 			width: 42px;
 			height: 42px;
 			transition: all 0.3s ease 0s;
+			padding: 7px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 		&._spoller-active {
 			border: none;

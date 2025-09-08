@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Услуга детальная"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+            @@include('html/components/_breadcrumbs.htm',{
+            "title":"Услуга детальная"
+            })
+            @@include('html/components/_services-single.htm',{})
+            @@include('html/components/_advantages.htm',{})
+            @@include('html/components/_services-single-descr.htm',{})
+            @@include('html/components/_service-price.htm',{})
+            @@include('html/components/_feedback-services.htm',{})
+            @@include('html/components/_main-experts.htm',{})
+            @@include('html/components/_main-questions.htm',{})
+            @@include('html/components/_news-sections.htm',{})
+            @@include('html/components/_main-contacts.htm',{})
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

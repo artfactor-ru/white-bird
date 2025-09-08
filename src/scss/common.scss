@@ -1,6 +1,10 @@
 // Заголовки, общие БЕМ блоки и прочее...
 .sections {
 	margin-top: 60px;
+
+	@media (max-width: $mobile) {
+		margin-top: 40px;
+	}
 	&__header {
 		display: flex;
 		justify-content: space-between;
@@ -9,9 +13,39 @@
 		margin-bottom: 30px;
 		.btns {
 			display: flex;
-			gap: 32px;
+			gap: 10px;
 		}
 		.subtitle {
+			@media (max-width: $mobile) {
+				font-size: 18px;
+			}
+		}
+	}
+
+	&__footer {
+		display: none;
+		justify-content: center;
+		padding: 25px 0;
+		@media (max-width: $mobile) {
+			display: flex;
+		}
+
+		a {
+			color: $accentColor;
+			font-size: 24px;
+			font-style: normal;
+			font-weight: 300;
+			line-height: 140%;
+			letter-spacing: 0.72px;
+			transition: all 0.3s ease 0s;
+			@media (max-width: 1360px) {
+				font-size: 18px;
+			}
+			@media (any-hover: hover) {
+				&:hover {
+					color: #20f0ff;
+				}
+			}
 		}
 	}
 }
@@ -27,6 +61,18 @@
 		font-weight: 400;
 		line-height: normal;
 		text-transform: uppercase;
+
+		@media (max-width: 1740px) {
+			font-size: 46px;
+		}
+
+		@media (max-width: 1360px) {
+			font-size: 40px;
+		}
+
+		@media (max-width: $mobile) {
+			font-size: 30px;
+		}
 	}
 	a {
 		color: $accentColor;
@@ -36,10 +82,17 @@
 		line-height: 140%;
 		letter-spacing: 0.72px;
 		transition: all 0.3s ease 0s;
+		@media (max-width: 1360px) {
+			font-size: 18px;
+		}
 		@media (any-hover: hover) {
 			&:hover {
 				color: #20f0ff;
 			}
+		}
+
+		@media (max-width: $mobile) {
+			display: none;
 		}
 	}
 }
@@ -53,6 +106,7 @@
 	&-search {
 		width: 32px;
 		height: 32px;
+		flex: 0 0 32px;
 		padding: 0;
 		background-color: transparent;
 		border: none;
@@ -72,9 +126,14 @@
 		border: none;
 		background-color: #fff;
 		border-radius: 4px;
+		@media (max-width: 1740px) {
+			font-size: 18px;
+			padding: 10px 30px;
+		}
 	}
 
 	&-form {
+		white-space: nowrap;
 		width: 100%;
 		text-align: center;
 		padding: 10px 14px;
@@ -178,7 +237,7 @@
 	display: flex;
 	align-items: center;
 	gap: 10px;
-	font-size: 22px;
+	font-size: 18px;
 	font-style: normal;
 	font-weight: 300;
 	line-height: normal;
@@ -187,9 +246,13 @@
 	background-color: transparent;
 	border: none;
 	padding: 0;
+
+	@media (max-width: 1360px) {
+		font-size: 16px;
+	}
 	&-services {
 		background: #eaf3fa;
-		padding: 20px 187px 20px 24px;
+		padding: 20px 162px 20px 24px;
 		display: flex;
 		align-items: center;
 		gap: 16px;
@@ -202,6 +265,10 @@
 		.icon {
 			width: 25px;
 			height: 12px;
+		}
+
+		@media (max-width: 1740px) {
+			padding: 20px 116px 20px 24px;
 		}
 	}
 
@@ -222,6 +289,14 @@
 			&:hover {
 				color: #20f0ff;
 			}
+		}
+
+		@media (max-width: 1740px) {
+			font-size: 20px;
+		}
+
+		@media (max-width: $mobile) {
+			font-size: 18px;
 		}
 	}
 
@@ -325,6 +400,12 @@ svg {
 				opacity: 1;
 			}
 		}
+	}
+
+	@media (max-width: $mobile) {
+		flex: 0 0 42px;
+		width: 42px;
+		height: 42px;
 	}
 
 	&::after {
@@ -479,7 +560,60 @@ th {
 
 [data-editor] {
 	font-size: $fontSize;
-	line-height: var(--line-height-text);
+	line-height: 130%;
+	@media (max-width: 1740px) {
+		font-size: 18px;
+	}
+	@media (max-width: $mobile) {
+		font-size: 16px;
+	}
+}
+
+[data-editor] h1,
+[data-editor] h2,
+[data-editor] h3,
+[data-editor] h4,
+[data-editor] h5,
+[data-editor] h6 {
+	color: $color-title;
+	font-family: BebasNeueCyrillic;
+}
+[data-editor] h1 {
+	font-size: 30px;
+	@media (max-width: $tablet) {
+		font-size: 24px;
+	}
+}
+[data-editor] h2 {
+	font-size: 28px;
+	@media (max-width: $tablet) {
+		font-size: 22px;
+	}
+}
+[data-editor] h3 {
+	font-size: 26px;
+	@media (max-width: $tablet) {
+		font-size: 20px;
+	}
+}
+[data-editor] h4 {
+	font-size: 24px;
+	@media (max-width: $tablet) {
+		font-size: 18px;
+	}
+}
+[data-editor] h5 {
+	font-size: 22px;
+	@media (max-width: $tablet) {
+		font-size: 16px;
+	}
+}
+
+[data-editor] h6 {
+	font-size: 20px;
+	@media (max-width: $tablet) {
+		font-size: 14px;
+	}
 }
 
 [data-editor] > :not(:last-child) {

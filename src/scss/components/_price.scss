@@ -1,9 +1,20 @@
 .prices {
 	padding: 60px 0;
 	background-color: #eaf3fa;
+	@media (max-width: $mobile) {
+		padding: 32px 0;
+	}
 	&__body {
 		background-color: #fff;
 		padding: 40px 80px;
+
+		@media (max-width: 1360px) {
+			padding: 26px 40px;
+		}
+
+		@media (max-width: $mobile) {
+			padding: 8px 13px;
+		}
 	}
 	&__list {
 	}
@@ -12,9 +23,16 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		gap: 20px;
+		gap: 50px;
 		&:not(:last-child) {
 			border-bottom: 1px solid #eee;
+		}
+
+		@media (max-width: $mobile) {
+			padding: 14px 0;
+			flex-direction: column;
+			align-items: normal;
+			gap: 10px;
 		}
 		.wrapper {
 		}
@@ -25,6 +43,14 @@
 			font-weight: 300;
 			line-height: 140%;
 			letter-spacing: 0.9px;
+
+			@media (max-width: 1360px) {
+				font-size: 24px;
+			}
+
+			@media (max-width: $mobile) {
+				font-size: 18px;
+			}
 		}
 		.descr {
 			color: $mainColor;
@@ -33,11 +59,37 @@
 			font-weight: 300;
 			line-height: 140%;
 			letter-spacing: 0.72px;
+
+			@media (max-width: $mobile) {
+				font-size: 16px;
+			}
 		}
 		.box {
 			display: flex;
 			align-items: center;
 			gap: 30px;
+
+			@media (max-width: $mobile) {
+				flex-direction: column;
+				align-items: normal;
+				gap: 16px;
+			}
+
+			.price__box {
+				display: flex;
+				gap: 30px;
+				align-items: end;
+
+				@media (max-width: 1360px) {
+					flex-direction: column;
+					gap: 5px;
+				}
+
+				@media (max-width: $mobile) {
+					flex-direction: row;
+					align-items: normal;
+				}
+			}
 		}
 		.old-price {
 			white-space: nowrap;
@@ -48,6 +100,10 @@
 			line-height: 140%;
 			letter-spacing: 0.72px;
 			text-decoration-line: line-through;
+
+			@media (max-width: $mobile) {
+				font-size: 16px;
+			}
 		}
 		.new-price {
 			white-space: nowrap;
@@ -56,6 +112,17 @@
 			font-style: normal;
 			font-weight: 300;
 			line-height: normal;
+			@media (max-width: 1360px) {
+				font-size: 30px;
+			}
+
+			@media (max-width: $mobile) {
+				font-size: 24px;
+			}
+
+			@media (max-width: $mobile) {
+				order: -1;
+			}
 		}
 		.btn {
 		}

@@ -1,11 +1,30 @@
 .questions {
 	padding: 60px 0;
 	background-color: #eaf3fa;
+
+	@media (max-width: $mobile) {
+		padding: 32px 0;
+	}
 	&__body {
 		background-color: #fff;
 		padding: 40px 80px;
+		@media (max-width: 1360px) {
+			padding: 26px 40px;
+		}
+
+		@media (max-width: $mobile) {
+			padding: 8px 13px;
+
+			.spollers__title {
+				font-size: 18px;
+			}
+		}
 	}
 	&__content {
 		padding: 24px;
+
+		@media (max-width: $mobile) {
+			padding: 0px 10px;
+		}
 	}
 }
