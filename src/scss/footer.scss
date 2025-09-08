@@ -7,14 +7,51 @@
 		padding: 40px 0;
 		display: flex;
 		align-items: start;
+
+		@media (max-width: 1360px) {
+			flex-direction: column;
+			gap: 40px;
+			align-items: normal;
+		}
+
+		@media (max-width: $mobile) {
+			gap: 20px;
+		}
+	}
+
+	&__flex {
+		display: flex;
+		gap: 90px;
+		margin-right: 120px;
+		@media (max-width: 1740px) {
+			flex-direction: column;
+			gap: 20px;
+		}
+
+		@media (max-width: 1360px) {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 100px;
+			margin-right: 0;
+		}
+
+		@media (max-width: $mobile) {
+			grid-template-columns: repeat(1, 1fr);
+			gap: 10px;
+		}
 	}
 	&__logo {
 		flex: 0 0 360px;
-		margin-right: 90px;
-
+		@media (max-width: 1740px) {
+			flex: 0 0 100%;
+		}
 		a {
 			display: inline-block;
 			margin-bottom: 36px;
+
+			@media (max-width: $mobile) {
+				margin-bottom: 20px;
+			}
 		}
 
 		.branches {
@@ -22,6 +59,10 @@
 				display: flex;
 				flex-direction: column;
 				gap: 32px;
+
+				@media (max-width: $mobile) {
+					gap: 10px;
+				}
 				li {
 					span {
 						display: block;
@@ -31,6 +72,15 @@
 						font-size: 32px;
 						font-weight: 300;
 						line-height: normal;
+						margin-bottom: 20px;
+						@media (max-width: 1740px) {
+							font-size: 28px;
+						}
+
+						@media (max-width: $mobile) {
+							margin-bottom: 6px;
+							font-size: 22px;
+						}
 					}
 					.adress {
 						color: #fff;
@@ -38,6 +88,10 @@
 						font-weight: 300;
 						line-height: 140%;
 						letter-spacing: 0.66px;
+
+						@media (max-width: $mobile) {
+							font-size: 18px;
+						}
 					}
 				}
 			}
@@ -45,7 +99,9 @@
 	}
 	&__contacts {
 		flex: 0 0 350px;
-		margin-right: 120px;
+		@media (max-width: 1740px) {
+			flex: 0 0 100%;
+		}
 	}
 	&__works {
 		color: #fff;
@@ -54,14 +110,27 @@
 		line-height: 140%;
 		letter-spacing: 0.66px;
 		margin-bottom: 20px;
+
+		@media (max-width: $mobile) {
+			font-size: 18px;
+			margin-bottom: 10px;
+		}
 	}
 	&__call {
 		margin-bottom: 35px;
+
+		@media (max-width: $mobile) {
+			margin-bottom: 25px;
+		}
 	}
 	&__box {
 		display: flex;
 		gap: 18px;
 		margin-bottom: 8px;
+
+		@media (max-width: 1740px) {
+			gap: 10px;
+		}
 		span {
 			color: #fff;
 			font-size: 22px;
@@ -74,6 +143,9 @@
 			font-size: 32px;
 			font-weight: 300;
 			line-height: 23px;
+			@media (max-width: 1740px) {
+				font-size: 28px;
+			}
 		}
 	}
 	&__actions {
@@ -85,6 +157,13 @@
 			font-size: 32px;
 			font-weight: 300;
 			line-height: 30px;
+			@media (max-width: 1740px) {
+				font-size: 28px;
+			}
+
+			@media (max-width: $mobile) {
+				font-size: 22px;
+			}
 		}
 	}
 	&__social {
@@ -99,6 +178,10 @@
 				display: flex;
 				align-items: center;
 				gap: 8px;
+
+				@media (max-width: $mobile) {
+					font-size: 18px;
+				}
 				.icon {
 					width: 30px;
 					height: 30px;
@@ -107,9 +190,37 @@
 			}
 		}
 	}
+	&__grid {
+		display: flex;
+
+		@media (max-width: 1360px) {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 77px;
+		}
+
+		@media (max-width: $mobile) {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 15px;
+		}
+	}
 	&__menu {
 		&:not(:last-child) {
 			margin-right: 40px;
+
+			@media (max-width: 1740px) {
+				margin-right: 100px;
+			}
+
+			@media (max-width: 1360px) {
+				margin-right: 0px;
+			}
+		}
+
+		@media (max-width: $mobile) {
+			&:nth-child(2) {
+				order: 1;
+			}
 		}
 
 		.name {
@@ -119,12 +230,21 @@
 			line-height: 23px;
 			margin-bottom: 18px;
 			display: inline-block;
+
+			@media (max-width: $mobile) {
+				font-size: 20px;
+				margin-bottom: 10px;
+			}
 		}
 	}
 	&__list {
 		display: flex;
 		flex-direction: column;
 		gap: 15px;
+
+		@media (max-width: $mobile) {
+			gap: 10px;
+		}
 		li {
 			a {
 				color: #fff;
@@ -135,6 +255,10 @@
 				letter-spacing: 0.66px;
 				display: inline-block;
 				position: relative;
+
+				@media (max-width: $mobile) {
+					font-size: 18px;
+				}
 				@media (any-hover: hover) {
 					&:hover {
 						&::after {
@@ -157,11 +281,23 @@
 	}
 	&__copy {
 		padding: 35px 0;
+
+		@media (max-width: 1024px) {
+			padding: 25px 0;
+		}
 		.copy {
 			text-align: center;
 			color: #bbc4d7;
 			font-size: 24px;
 			font-weight: 300;
+
+			@media (max-width: 1024px) {
+				font-size: 18px;
+			}
+
+			@media (max-width: $mobile) {
+				font-size: 16px;
+			}
 		}
 	}
 	&__copy-list {
@@ -170,7 +306,13 @@
 		align-items: center;
 		gap: 30px;
 		margin-bottom: 14px;
+
+		@media (max-width: 1024px) {
+			flex-direction: column;
+			gap: 5px;
+		}
 		li {
+			line-height: 100%;
 			a {
 				font-size: 24px;
 				font-style: normal;
@@ -181,6 +323,14 @@
 					&:hover {
 						color: $accentColor;
 					}
+				}
+
+				@media (max-width: 1024px) {
+					font-size: 18px;
+				}
+
+				@media (max-width: $mobile) {
+					font-size: 16px;
 				}
 			}
 		}

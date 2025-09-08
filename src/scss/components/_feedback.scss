@@ -5,6 +5,24 @@
 		display: grid;
 		gap: 120px;
 		grid-template-columns: 1fr 540px;
+
+		@media (max-width: 1360px) {
+			padding: 40px 0px;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 40px;
+		}
+
+		@media (max-width: $tablet) {
+			grid-template-columns: repeat(1, 1fr);
+			gap: 14px;
+		}
+	}
+
+	&__form {
+		@media (max-width: $mobile) {
+			border-top: 1px solid #fff;
+			padding-top: 14px;
+		}
 	}
 	&__content {
 	}
@@ -17,6 +35,15 @@
 		font-weight: 400;
 		line-height: 110%;
 		text-transform: uppercase;
+
+		@media (max-width: 1740px) {
+			font-size: 46px;
+		}
+
+		@media (max-width: $mobile) {
+			font-size: 30px;
+			text-align: center;
+		}
 	}
 	&__text {
 		color: #fff;
@@ -26,6 +53,14 @@
 		line-height: 140%;
 		letter-spacing: 0.72px;
 		margin-bottom: 20px;
+		@media (max-width: 1740px) {
+			font-size: 20px;
+		}
+
+		@media (max-width: $mobile) {
+			font-size: 16px;
+			text-align: center;
+		}
 	}
 	&__subtitle {
 		padding-top: 24px;
@@ -37,6 +72,13 @@
 		font-weight: 300;
 		line-height: normal;
 		letter-spacing: 1.5px;
+		@media (max-width: 1740px) {
+			font-size: 42px;
+		}
+
+		@media (max-width: $mobile) {
+			text-align: center;
+		}
 	}
 	&__phone {
 		color: #fff;
@@ -47,13 +89,30 @@
 		letter-spacing: 1.5px;
 		margin-bottom: 20px;
 		display: inline-block;
+		@media (max-width: 1740px) {
+			font-size: 42px;
+		}
+
+		@media (max-width: $mobile) {
+			font-size: 24px;
+			text-align: center;
+			display: block;
+		}
 	}
 	&__social {
 		display: flex;
 		align-items: center;
 		gap: 16px;
+
+		@media (max-width: $mobile) {
+			justify-content: center;
+		}
 		span {
 			color: #fff;
+
+			@media (max-width: $mobile) {
+				font-size: 16px;
+			}
 		}
 	}
 	&__list {
@@ -74,36 +133,34 @@
 		}
 	}
 	&__form {
-		.form {
-			padding: 0;
+		.label {
+			color: #fff;
+			margin-bottom: 7px;
+			display: inline-block;
+		}
 
-			.label {
-				color: #fff;
+		.input {
+			background-color: $accentColor;
+			border-color: #fff;
+			color: #fff;
+			&::placeholder {
+				color: #fff !important;
 			}
+		}
+		.form-consent .checkbox-box {
+			border-color: #fff;
+		}
 
-			.input {
-				background-color: $accentColor;
-				border-color: #fff;
-				color: #fff;
-				&::placeholder {
-					color: #fff;
-				}
-			}
-			.form-consent .checkbox-box {
-				border-color: #fff;
-			}
+		.form-consent input[type="checkbox"]:checked + .checkbox-box {
+			border-color: #fff;
+		}
 
-			.form-consent input[type="checkbox"]:checked + .checkbox-box {
-				border-color: #fff;
-			}
+		.checkbox-text {
+			color: #fff;
+		}
 
-			.checkbox-text {
-				color: #fff;
-			}
-
-			.form-consent .checkbox-text a {
-				color: #fff;
-			}
+		.form-consent .checkbox-text a {
+			color: #fff;
 		}
 	}
 }

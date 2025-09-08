@@ -1,0 +1,65 @@
+.news {
+	&__grid {
+		display: grid;
+		grid-template-columns: 1fr 470px;
+		gap: 30px;
+	}
+	&__slider {
+		padding: 2px;
+		margin: -2px;
+		min-width: 0;
+	}
+	&__wrapper {
+	}
+	&__slide {
+	}
+	&__card {
+		display: grid;
+		grid-template-columns: 410px 1fr;
+		overflow: hidden;
+		position: relative;
+
+		@media (any-hover: hover) {
+			&:hover {
+				.content {
+					span {
+						color: #20f0ff;
+					}
+				}
+			}
+		}
+		.media {
+			border-radius: 3px;
+			overflow: hidden;
+		}
+		.content {
+			padding: 30px;
+			border-radius: 3px;
+			border: 1px solid #eaf3fa;
+
+			span {
+				color: #20b2ff;
+				font-size: 24px;
+				font-style: normal;
+				font-weight: 300;
+				line-height: 140%;
+				letter-spacing: 0.72px;
+				transition: all 0.3s ease 0s;
+				transition: all 0.3s ease 0s;
+			}
+		}
+		.name {
+			color: $color-title;
+			font-family: BebasNeueCyrillic;
+			font-size: 34px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 130%;
+			letter-spacing: 1.02px;
+			margin-bottom: 24px;
+		}
+		.exerpt {
+			margin-bottom: 60px;
+		}
+	}
+}

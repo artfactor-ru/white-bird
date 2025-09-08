@@ -3,6 +3,16 @@
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		gap: 30px;
+
+		@media (max-width: 1360px) {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 20px;
+		}
+
+		@media (max-width: $mobile) {
+			grid-template-columns: repeat(1, 1fr);
+			gap: 10px;
+		}
 	}
 	&__item {
 		border-radius: 3px;
@@ -15,6 +25,10 @@
 		flex: 0 0 auto;
 		picture {
 			height: 320px;
+
+			@media (max-width: 1740px) {
+				height: 250px;
+			}
 		}
 	}
 	&__content {
@@ -30,6 +44,10 @@
 			font-weight: 300;
 			line-height: 140%;
 			letter-spacing: 0.72px;
+
+			@media (max-width: 1740px) {
+				font-size: 20px;
+			}
 		}
 		.price {
 			margin-top: 15px;
