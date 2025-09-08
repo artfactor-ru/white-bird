@@ -1,0 +1,10 @@
+.page {
+	&__body {
+		max-width: 1290px;
+		.information {
+			border-radius: 20px;
+			background: #eaf3fa;
+			padding: 15px;
+		}
+	}
+}
