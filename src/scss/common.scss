@@ -116,6 +116,7 @@
 		background-color: transparent;
 		border: none;
 		margin-left: 40px;
+		color: #fff;
 	}
 
 	&-call {
@@ -251,6 +252,7 @@
 	background-color: transparent;
 	border: none;
 	padding: 0;
+	transition: all 0.3s ease 0s;
 
 	@media (max-width: 1360px) {
 		font-size: 16px;
@@ -565,7 +567,7 @@ th {
 
 [data-editor] {
 	font-size: $fontSize;
-	line-height: 130%;
+	line-height: 120%;
 	@media (max-width: 1740px) {
 		font-size: 18px;
 	}

@@ -1,0 +1,159 @@
+.works {
+	padding: 0 0 40px 0;
+	&__body {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 30px;
+
+		@media (max-width: 1740px) {
+			grid-template-columns: repeat(3, 1fr);
+			gap: 20px;
+		}
+
+		@media (max-width: $tablet) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media (max-width: $mobile) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+}
+
+.sections {
+	&__header {
+	}
+}
+.title {
+}
+.work {
+	&__card {
+		min-width: 0;
+		border-radius: 10px;
+		border: 1px solid #e4e4e4;
+		overflow: hidden;
+	}
+	&__slider {
+		min-width: 0;
+		position: relative;
+		.swiper-pagination {
+			justify-content: start;
+			left: 30px;
+			bottom: 30px;
+			.swiper-pagination-bullet.swiper-pagination-bullet-active {
+				background-color: $accentColor;
+				width: 12px;
+				height: 12px;
+			}
+		}
+	}
+	&__wrapper {
+	}
+	&__slide {
+		position: relative;
+		&:nth-child(1) {
+			&::after {
+				content: "до";
+				position: absolute;
+				bottom: 30px;
+				right: 30px;
+				padding: 6px;
+				background-color: #fff;
+				border-radius: 10px;
+				color: #000;
+				font-size: 18px;
+				font-weight: 300;
+				line-height: 120%;
+				letter-spacing: 0.54px;
+			}
+		}
+		&:nth-child(2) {
+			&::after {
+				content: "после";
+				position: absolute;
+				bottom: 30px;
+				right: 30px;
+				padding: 6px;
+				background-color: #fff;
+				border-radius: 10px;
+				color: #000;
+				font-size: 18px;
+				font-weight: 300;
+				line-height: 120%;
+				letter-spacing: 0.54px;
+			}
+		}
+	}
+	&__content {
+		padding: 20px;
+		.link {
+			display: inline-block;
+			transition: all 0.3s ease 0s;
+			@media (any-hover: hover) {
+				&:hover {
+					color: $accentColor-2;
+				}
+			}
+		}
+		.name {
+			color: #000;
+			font-size: 22px;
+			font-style: normal;
+			font-weight: 300;
+			line-height: normal;
+			letter-spacing: 0.66px;
+			margin-bottom: 8px;
+		}
+		.doctor {
+			color: #737f87;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 300;
+			line-height: normal;
+			letter-spacing: 0.48px;
+			white-space: nowrap;
+			margin-bottom: 16px;
+
+			.link {
+				font-size: 16px;
+			}
+		}
+
+		.direction {
+			display: none;
+			color: #000;
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 300;
+			line-height: normal;
+			letter-spacing: 0.54px;
+
+			.link {
+				font-size: 16px;
+			}
+		}
+		.complaint {
+			display: none;
+			color: #000;
+			font-size: 18px;
+			font-weight: 300;
+			letter-spacing: 0.54px;
+			line-height: 110%;
+			margin-bottom: 20px;
+			span {
+				color: #737f87;
+			}
+		}
+		.treatment {
+			display: none;
+			color: #000;
+			font-size: 18px;
+			line-height: 110%;
+			font-weight: 300;
+			letter-spacing: 0.54px;
+			span {
+				color: #737f87;
+			}
+		}
+	}
+}

@@ -1,10 +1,30 @@
-<div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрити</button>
-			<div class="popup__text">
-				Text
-			</div>
-		</div>
-	</div>
-</div>
+<dialog id="work" style="display:none;">
+    <div class="popup__body">
+        <div class="popup-work__body">
+            <div class="work__slider swiper">
+                <div class="work__wrapper swiper-wrapper">
+                    <div class="work__slide swiper-slide">
+                        <picture class="lazy image--cover">
+                            <img data-src="" class="image lazy__item" alt="">
+                        </picture>
+                    </div>
+                    <div class="work__slide swiper-slide">
+                        <picture class="lazy image--cover">
+                            <img data-src="" class="image lazy__item" alt="">
+                        </picture>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="work__content">
+                <div class="name"></div>
+                <div class="direction"></div>
+                <div class="doctor"></div>
+                <div class="complaint">
+                </div>
+                <div class="treatment">
+                </div>
+            </div>
+        </div>
+    </div>
+</dialog>
