@@ -7,6 +7,7 @@
 	width: 100%;
 	z-index: 100;
 	background-color: #fff;
+	min-width: 375px;
 	&._header-scroll {
 		position: fixed;
 		top: -200%;

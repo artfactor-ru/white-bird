@@ -368,6 +368,21 @@ if (document.querySelector(".news__slider")) {
 	});
 }
 
+if (document.querySelector(".work__slider")) {
+	new Swiper(".work__slider", {
+		modules: [Pagination],
+		slidesPerView: 1,
+		spaceBetween: 0,
+		speed: 800,
+		touchRatio: 0,
+		slideToClickedSlide: true,
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+	});
+}
+
 if (document.querySelector(".contacts__slider")) {
 	const swiper = new Swiper(".contacts__slider", {
 		modules: [Navigation],

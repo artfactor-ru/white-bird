@@ -1,0 +1,136 @@
+.page-sales {
+	padding: 0 0 40px 0;
+
+	&__body {
+		display: grid;
+		grid-template-columns: 1fr 540px;
+		gap: 60px;
+
+		@media (max-width: 1360px) {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 20px;
+		}
+
+		@media (max-width: $tablet) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+	&__box {
+		display: flex;
+		margin-bottom: 15px;
+
+		@media (max-width: $mobile) {
+			justify-content: center;
+		}
+	}
+
+	&__media {
+		max-width: 700px;
+		position: relative;
+		border-radius: 10px;
+		overflow: hidden;
+		.stock {
+			position: absolute;
+			top: 12px;
+			left: 12px;
+			padding: 4px 16px;
+			color: #fff;
+			background-color: $accentColor;
+			font-family: BebasNeueCyrillic;
+			border-radius: 20px;
+			font-size: 35px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			text-transform: uppercase;
+		}
+		.date {
+			position: absolute;
+			left: 12px;
+			bottom: 12px;
+			color: #fff;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 300;
+			line-height: normal;
+			letter-spacing: 0.42px;
+		}
+	}
+	&__content {
+		.date__time {
+			color: $accentColor;
+			font-size: 19px;
+			font-style: normal;
+			font-weight: 300;
+			line-height: normal;
+			letter-spacing: 0.57px;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__form {
+		border-radius: 15px;
+		background: #eaf3fa;
+		padding: 42px 20px;
+
+		@media (max-width: $mobile) {
+			padding: 36px 15px;
+		}
+
+		.page-sales__title {
+			color: #000;
+			font-family: BebasNeueCyrillic;
+			font-size: 46px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			text-transform: uppercase;
+			padding-bottom: 20px;
+			margin-bottom: 40px;
+			border-bottom: 1px solid $accentColor;
+			@media (max-width: $mobile) {
+				font-size: 30px;
+				padding-bottom: 15px;
+				margin-bottom: 15px;
+			}
+		}
+	}
+
+	&__contacts {
+		margin-top: 40px;
+
+		@media (max-width: $mobile) {
+			margin-top: 20px;
+		}
+
+		.feedback__subtitle {
+			border-top: 1px solid $accentColor;
+			color: #000;
+			font-size: 30px;
+		}
+
+		.feedback__text {
+			color: #000;
+			font-size: 18px;
+		}
+
+		.feedback__phone {
+			color: $accentColor;
+			font-size: 28px;
+		}
+
+		.feedback__social {
+			@media (max-width: $mobile) {
+				flex-direction: column;
+			}
+		}
+
+		.feedback__social span {
+			color: #000;
+		}
+
+		.feedback__list li a .icon {
+			color: $accentColor;
+		}
+	}
+}

@@ -162,6 +162,7 @@ body {
 @import "header";
 @import "footer";
 @import "./components/breadcrumbs";
+@import "./components/pagination";
 @import "./components/hero";
 @import "./components/experts";
 @import "./components/price";
@@ -179,6 +180,10 @@ body {
 @import "./components/news";
 @import "./components/page";
 @import "./components/reviews";
+@import "./components/page-sales";
+@import "./components/error";
+@import "./components/works";
+@import "./components/page-search";
 
 // Подключение стилей отдельных страниц
 @import "home";
