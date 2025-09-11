@@ -46,3 +46,24 @@ btnAplication.forEach((btn) => {
 		}, 200);
 	});
 });
+
+const btnCall = document.querySelectorAll("[data-call]");
+btnCall.forEach((btn) => {
+	btn.addEventListener("click", () => {
+		Fancybox.show([{ src: "#call", type: "inline" }]);
+	});
+});
+
+const btnService = document.querySelectorAll("[data-call-service]");
+const popup = document.querySelector("#call-service");
+const spanName = popup.querySelector(".name");
+const hiddenInput = popup.querySelector('input[name="service_name"]');
+
+btnService.forEach((btn) => {
+	btn.addEventListener("click", () => {
+		const serviceName = btn.dataset.name;
+		spanName.textContent = serviceName;
+		hiddenInput.value = serviceName;
+		Fancybox.show([{ src: "#call-service", type: "inline" }]);
+	});
+});

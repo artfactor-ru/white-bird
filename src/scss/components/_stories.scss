@@ -5,6 +5,127 @@
 	}
 	&__slide {
 	}
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 30px;
+
+		@media (max-width: $tablet) {
+			grid-template-columns: repeat(1, 1fr);
+			gap: 20px;
+		}
+	}
+	&__media {
+		min-width: 0;
+		border-radius: 24px;
+		overflow: hidden;
+		background-color: #eff1f5;
+		padding: 30px;
+
+		@media (max-width: $tablet) {
+			padding: 15px;
+		}
+	}
+	&__body {
+		display: grid;
+		grid-template-columns: 1fr 660px;
+		gap: 30px;
+
+		@media (max-width: 1740px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: 1360px) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+
+		.history__slider {
+			border-radius: 18px;
+			overflow: hidden;
+			position: relative;
+			.swiper-pagination {
+				justify-content: center;
+				bottom: 30px;
+				.swiper-pagination-bullet.swiper-pagination-bullet-active {
+					background-color: $accentColor;
+					width: 12px;
+					height: 12px;
+				}
+			}
+		}
+	}
+
+	&__content {
+		.link {
+			display: inline-block;
+			transition: all 0.3s ease 0s;
+			@media (any-hover: hover) {
+				&:hover {
+					color: $accentColor-2;
+				}
+			}
+		}
+		.name {
+			color: #000;
+			font-size: 22px;
+			font-style: normal;
+			font-weight: 300;
+			line-height: normal;
+			letter-spacing: 0.66px;
+			margin-bottom: 8px;
+		}
+		.doctor {
+			color: #737f87;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 300;
+			line-height: normal;
+			letter-spacing: 0.48px;
+			white-space: nowrap;
+			margin-bottom: 16px;
+
+			.link {
+				font-size: 16px;
+			}
+		}
+
+		.direction {
+			color: #000;
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 300;
+			line-height: normal;
+			letter-spacing: 0.54px;
+
+			.link {
+				font-size: 16px;
+			}
+		}
+		.complaint {
+			color: #000;
+			font-size: 18px;
+			font-weight: 300;
+			letter-spacing: 0.54px;
+			line-height: 110%;
+			margin-bottom: 20px;
+			span {
+				color: #737f87;
+			}
+		}
+		.treatment {
+			color: #000;
+			font-size: 18px;
+			line-height: 110%;
+			font-weight: 300;
+			letter-spacing: 0.54px;
+			span {
+				color: #737f87;
+			}
+		}
+	}
+}
+
+.page-stories {
+	padding: 0 0 40px 0;
 }
 
 .story {

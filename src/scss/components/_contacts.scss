@@ -242,6 +242,10 @@
 					}
 					.btn-form {
 						min-width: 320px;
+
+						@media (max-width: $mobileSmall) {
+							min-width: auto;
+						}
 					}
 				}
 			}

@@ -1,0 +1,237 @@
+.chart {
+	padding: 0 0 100px 0;
+	&__body {
+		@media (max-width: $tablet) {
+			display: none;
+		}
+	}
+	&__header {
+		display: grid;
+		grid-template-columns: 450px 1fr 1fr 1fr 1fr 1fr 1fr 246px;
+		@media (max-width: 1360px) {
+			grid-template-columns: 320px 1fr 1fr 1fr 1fr 1fr 1fr 160px;
+		}
+	}
+	&__th {
+		background: #f3f3f3;
+		border: 1px solid #fff;
+		padding: 8px 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		span {
+			color: #6b808f;
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 300;
+			line-height: 140%;
+			letter-spacing: 0.54px;
+		}
+	}
+
+	.chart-table {
+		&__row {
+			display: grid;
+			grid-template-columns: 450px 1fr 1fr 1fr 1fr 1fr 1fr 246px;
+			@media (max-width: 1360px) {
+				grid-template-columns: 320px 1fr 1fr 1fr 1fr 1fr 1fr 160px;
+			}
+		}
+
+		&__th {
+			padding: 5px 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: 1px solid #bfbfbf;
+			span {
+				text-align: center;
+				font-size: 20px;
+				font-style: normal;
+				font-weight: 300;
+				line-height: 140%;
+				letter-spacing: 0.6px;
+				@media (max-width: 1360px) {
+					font-size: 14px;
+				}
+			}
+			.doctor {
+				display: flex;
+				align-items: center;
+				gap: 20px;
+
+				.media {
+					flex: 0 0 94px;
+					width: 94px;
+					height: 94px;
+					background: #eff1f5;
+					border-radius: 100%;
+					overflow: hidden;
+					picture {
+						width: 100%;
+						height: 100%;
+					}
+				}
+
+				.name {
+					color: $color-title;
+					font-family: BebasNeueCyrillic;
+					font-size: 20px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 130%;
+					letter-spacing: 0.6px;
+				}
+
+				.post {
+					color: #6b808f;
+					font-size: 18px;
+					font-style: normal;
+					font-weight: 300;
+					line-height: 140%;
+					letter-spacing: 0.54px;
+				}
+			}
+		}
+	}
+
+	.chart__body-mobile {
+		display: none;
+		@media (max-width: $tablet) {
+			display: block;
+			.spollers {
+				gap: 0;
+			}
+
+			.spollers__item {
+				.spollers__title {
+					border: 1px solid #bfbfbf;
+					background: #f3f3f3;
+					padding: 5px 26px;
+
+					@media (max-width: $mobile) {
+						padding: 5px 10px;
+					}
+				}
+
+				.doctor {
+					display: flex;
+					align-items: center;
+					gap: 20px;
+
+					@media (max-width: $mobile) {
+						gap: 10px;
+					}
+
+					.media {
+						flex: 0 0 94px;
+						width: 94px;
+						height: 94px;
+						background: #eff1f5;
+						border-radius: 100%;
+						overflow: hidden;
+						picture {
+							width: 100%;
+							height: 100%;
+						}
+					}
+
+					.name {
+						color: $color-title;
+						font-family: BebasNeueCyrillic;
+						font-size: 20px;
+						font-style: normal;
+						font-weight: 400;
+						line-height: 130%;
+						letter-spacing: 0.6px;
+
+						@media (max-width: $mobile) {
+							font-size: 18px;
+						}
+					}
+
+					.post {
+						color: #6b808f;
+						font-size: 18px;
+						font-style: normal;
+						font-weight: 300;
+						line-height: 110%;
+						letter-spacing: 0.54px;
+
+						@media (max-width: $mobile) {
+							font-size: 16px;
+						}
+					}
+				}
+
+				.spollers__body {
+					border-bottom: 1px solid #bfbfbf;
+					border-left: 1px solid #bfbfbf;
+					border-right: 1px solid #bfbfbf;
+					.chart-table-mobile__list {
+						display: grid;
+						grid-template-columns: repeat(1, 1fr);
+					}
+					.chart-table-mobile__row {
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+						padding: 20px 24px;
+
+						&:not(:last-child) {
+							border-bottom: 1px solid #bfbfbf;
+						}
+
+						@media (max-width: $mobile) {
+							padding: 15px;
+						}
+
+						.day {
+							text-align: center;
+							font-size: 20px;
+							font-weight: 300;
+							line-height: 140%;
+							letter-spacing: 0.6px;
+
+							@media (max-width: $mobile) {
+								font-size: 16px;
+							}
+						}
+
+						.box {
+							display: flex;
+							align-items: center;
+							gap: 20px;
+
+							.time {
+								white-space: nowrap;
+								text-align: center;
+								font-size: 20px;
+								font-weight: 300;
+								line-height: 140%;
+								letter-spacing: 0.6px;
+
+								@media (max-width: $mobile) {
+									font-size: 16px;
+								}
+							}
+
+							.notime {
+								white-space: nowrap;
+								text-align: center;
+								font-size: 20px;
+								font-weight: 300;
+								line-height: 140%;
+								letter-spacing: 0.6px;
+
+								@media (max-width: $mobile) {
+									font-size: 16px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

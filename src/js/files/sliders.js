@@ -382,6 +382,20 @@ if (document.querySelector(".work__slider")) {
 		},
 	});
 }
+if (document.querySelector(".history__slider")) {
+	new Swiper(".history__slider", {
+		modules: [Pagination],
+		slidesPerView: 1,
+		spaceBetween: 0,
+		speed: 800,
+		touchRatio: 1,
+		slideToClickedSlide: false,
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+	});
+}
 
 if (document.querySelector(".contacts__slider")) {
 	const swiper = new Swiper(".contacts__slider", {

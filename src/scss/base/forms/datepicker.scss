@@ -19,28 +19,12 @@
 	user-select: none;
 	//border-radius: 0.26392em;
 	overflow: hidden;
-	background: #000;
+	background: $accentColor;
 	-webkit-box-shadow: 0 1.25em 1.25em -0.9375em rgba(0, 0, 0, 0.3);
 	box-shadow: 0 1.25em 1.25em -0.9375em rgba(0, 0, 0, 0.3);
-	border-right: 1px solid #fff;
-	border-left: 1px solid #f1ad70;
+	border: 3px solid #fff;
 	padding: 5px;
-	&:before,
-	&:after {
-		content: "";
-		width: 100%;
-		height: 2px;
-		left: 0;
-		z-index: 2;
-		position: absolute;
-		background-image: linear-gradient(to right, #f1ad70 0%, #fffdf2 100%);
-	}
-	&:before {
-		top: 0;
-	}
-	&:after {
-		bottom: 0;
-	}
+	border-radius: 4px;
 }
 .qs-datepicker-container * {
 	-webkit-box-sizing: border-box;
@@ -164,14 +148,16 @@
 	flex-grow: 1;
 	-ms-flex-negative: 0;
 	flex-shrink: 0;
-	background: #000;
+	background: $accentColor;
 	color: #fff;
 	-webkit-filter: blur(0);
 	filter: blur(0);
 	-webkit-transition: -webkit-filter 0.3s;
 	transition: -webkit-filter 0.3s;
 	transition: filter 0.3s;
-	transition: filter 0.3s, -webkit-filter 0.3s;
+	transition:
+		filter 0.3s,
+		-webkit-filter 0.3s;
 }
 .qs-datepicker .qs-controls.qs-blur {
 	-webkit-filter: blur(5px);
@@ -204,14 +190,14 @@
 	transition: border 0.2s;
 }
 .qs-datepicker .qs-arrow.qs-left:after {
-	border-right-color: grey;
+	border-right-color: #fff;
 	right: 50%;
 	-webkit-transform: translate(25%, -50%);
 	-ms-transform: translate(25%, -50%);
 	transform: translate(25%, -50%);
 }
 .qs-datepicker .qs-arrow.qs-right:after {
-	border-left-color: grey;
+	border-left-color: #fff;
 	left: 50%;
 	-webkit-transform: translate(-25%, -50%);
 	-ms-transform: translate(-25%, -50%);
@@ -250,7 +236,9 @@
 	-webkit-transition: -webkit-filter 0.3s;
 	transition: -webkit-filter 0.3s;
 	transition: filter 0.3s;
-	transition: filter 0.3s, -webkit-filter 0.3s;
+	transition:
+		filter 0.3s,
+		-webkit-filter 0.3s;
 }
 .qs-datepicker .qs-squares.qs-blur {
 	-webkit-filter: blur(5px);
@@ -275,6 +263,7 @@
 }
 .qs-datepicker .qs-square.qs-current {
 	font-weight: 700;
+	background-color: #7bcdf7;
 }
 .qs-datepicker .qs-square.qs-current span {
 	text-decoration: underline;
@@ -314,10 +303,10 @@
 .qs-datepicker .qs-square.qs-day {
 	cursor: default;
 	font-weight: 700;
-	color: grey;
+	color: #fff;
 }
 .qs-datepicker .qs-square:not(.qs-empty):not(.qs-disabled):not(.qs-day):not(.qs-active):hover {
-	background: orange;
+	background: #7bcdf7;
 }
 .qs-datepicker .qs-event {
 	position: relative;

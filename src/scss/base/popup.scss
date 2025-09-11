@@ -39,3 +39,96 @@
 		}
 	}
 }
+
+#call,
+#call-service {
+	max-width: 650px;
+	border: none;
+	padding: 0;
+	.popup-call {
+		&__body {
+			padding: 40px;
+			background-color: $accentColor;
+			color: #fff;
+
+			@media (max-width: $mobile) {
+				padding: 40px 20px;
+			}
+
+			.label {
+				font-size: 18px;
+			}
+
+			.input {
+				background-color: transparent;
+				border: 3px solid #fff;
+				color: #fff;
+				&::placeholder {
+					color: #fff;
+				}
+			}
+
+			.wrapper-data {
+				position: relative;
+				&::after {
+					content: "";
+					background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M2 9C2 7.114 2 6.172 2.586 5.586C3.172 5 4.114 5 6 5H18C19.886 5 20.828 5 21.414 5.586C22 6.172 22 7.114 22 9C22 9.471 22 9.707 21.854 9.854C21.707 10 21.47 10 21 10H3C2.529 10 2.293 10 2.146 9.854C2 9.707 2 9.47 2 9ZM2 18C2 19.886 2 20.828 2.586 21.414C3.172 22 4.114 22 6 22H18C19.886 22 20.828 22 21.414 21.414C22 20.828 22 19.886 22 18V13C22 12.529 22 12.293 21.854 12.146C21.707 12 21.47 12 21 12H3C2.529 12 2.293 12 2.146 12.146C2 12.293 2 12.53 2 13V18Z' fill='%239EDEFF'/%3E%3Cpath d='M7 3V6M17 3V6' stroke='%239EDEFF' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: contain;
+					position: absolute;
+					top: 15px;
+					right: 22px;
+					width: 24px;
+					height: 24px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+			}
+
+			textarea.input {
+				color: #fff;
+				border-radius: 4px;
+				width: 100%;
+				display: block;
+				padding: 14px 16px;
+				background-color: $accentColor;
+				font-size: 18px;
+				font-weight: 300;
+				outline: none;
+				height: 100px;
+			}
+
+			.form-consent .checkbox-box {
+				border-color: #fff;
+			}
+
+			.form-consent input[type="checkbox"]:checked + .checkbox-box {
+				border-color: #fff;
+			}
+
+			.checkbox-text {
+				color: #fff;
+			}
+
+			.form-consent .checkbox-text a {
+				color: #fff;
+			}
+		}
+
+		&__title {
+			font-family: BebasNeueCyrillic;
+			font-size: 52px;
+			line-height: 56px;
+			text-transform: uppercase;
+			margin-bottom: 18px;
+
+			@media (max-width: $mobile) {
+				font-size: 34px;
+				line-height: 34px;
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
