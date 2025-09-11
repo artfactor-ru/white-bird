@@ -90,13 +90,29 @@
                         </ul>
                     </nav>
                 </div>
-                <button type="submit" class="btn-search">
-                    <svg>
-                        <use xlink:href="@img/icons/sprite.svg#search"></use>
-                    </svg>
-                </button>
-                <button class="btn-call">записаться на прием</button>
 
+                <div class="header__search">
+                    <div class="b-search"> <!-- is-open -->
+                        <form class="b-search__form">
+                            <div class="b-search__icon">
+                                <button type="button" class="btn-search">
+                                    <svg>
+                                        <use xlink:href="@img/icons/sprite.svg#search"></use>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <label class="input--search">
+                                <input type="search" class="input__field" placeholder="Поиск..." required="">
+                            </label>
+                        </form>
+                    </div>
+                </div>
+
+
+
+
+                <button class="btn-call" data-call>записаться на прием</button>
             </div>
         </div>
     </div>
@@ -114,6 +130,23 @@
                     </svg>
                 </span>
             </button>
+        </div>
+        <div class="menu-mible__search">
+            <div class="b-search">
+                <form class="b-search__form">
+                    <div class="b-search__icon">
+                        <button type="submit" class="btn-search">
+                            <svg>
+                                <use xlink:href="@img/icons/sprite.svg#search"></use>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <label class="input--search">
+                        <input type="search" class="input__field" placeholder="Поиск..." required="">
+                    </label>
+                </form>
+            </div>
         </div>
         <nav class="menu-mobile__body">
             <ul class="menu-mobile__list">
