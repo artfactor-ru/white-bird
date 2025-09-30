@@ -14,31 +14,134 @@ document.querySelectorAll("form").forEach(function (form) {
 	checkbox.addEventListener("change", toggleButton);
 });
 
-document.querySelectorAll(".menu-mobile__list .arrow").forEach((arrow) => {
-	arrow.addEventListener("click", (e) => {
-		e.preventDefault();
-		const parentLi = arrow.closest("li");
-		const parentUl = parentLi.parentElement; // текущий список (уровень)
+// document.querySelectorAll(".menu-mobile__list .arrow").forEach((arrow) => {
+// 	arrow.addEventListener("click", (e) => {
+// 		e.preventDefault();
+// 		const parentLi = arrow.closest("li");
+// 		const parentUl = parentLi.parentElement; // текущий список (уровень)
 
-		// закрываем только соседей на этом уровне
-		parentUl.querySelectorAll(":scope > li._open").forEach((li) => {
-			if (li !== parentLi) li.classList.remove("_open");
-		});
+// 		// закрываем только соседей на этом уровне
+// 		parentUl.querySelectorAll(":scope > li._open").forEach((li) => {
+// 			if (li !== parentLi) li.classList.remove("_open");
+// 		});
 
-		// переключаем текущее
-		parentLi.classList.toggle("_open");
+// 		// переключаем текущее
+// 		parentLi.classList.toggle("_open");
+// 	});
+// });
+
+// document.querySelector(".menu-mobile__overlay").addEventListener("click", (e) => {
+// 	document.documentElement.classList.remove("menu-open");
+// 	bodyUnlock();
+// });
+
+// document.querySelector(".close").addEventListener("click", (e) => {
+// 	document.documentElement.classList.remove("menu-open");
+// 	bodyUnlock();
+// });
+
+// Menu ===================================
+const menu = document.querySelector(".mobile-menu");
+const menuMains = menu.querySelectorAll(".menu-main");
+const goBack = menu.querySelector(".go-back");
+const menuTrigger = document.querySelector(".menu__icon");
+const closeMenu = menu.querySelector(".mobile-menu-close");
+const overlay = document.querySelector(".menu-overlay");
+const menuHead = menu.querySelector(".mobile-menu-head");
+const menuTitle = menu.querySelector(".current-menu-title");
+
+let subMenuStack = []; // стек открытых подменю
+
+menuMains.forEach((menuMain) => {
+	menuMain.addEventListener("click", (e) => {
+		if (!menu.classList.contains("active")) return;
+
+		const hasChildren = e.target.closest(".menu-item-has-children");
+		if (hasChildren) {
+			showSubMenu(hasChildren);
+		}
 	});
 });
 
-document.querySelector(".menu-mobile__overlay").addEventListener("click", (e) => {
-	document.documentElement.classList.remove("menu-open");
+goBack.addEventListener("click", () => {
+	hideSubMenu();
+});
+
+menuTrigger.addEventListener("click", () => {
+	toggleMenu();
+	bodyLock();
+});
+
+closeMenu.addEventListener("click", () => {
+	toggleMenu();
 	bodyUnlock();
 });
 
-document.querySelector(".close").addEventListener("click", (e) => {
-	document.documentElement.classList.remove("menu-open");
+overlay.addEventListener("click", () => {
+	toggleMenu();
 	bodyUnlock();
 });
+
+function toggleMenu() {
+	menu.classList.toggle("active");
+	overlay.classList.toggle("active");
+
+	// если меню закрываем - сбросить стек
+	if (!menu.classList.contains("active")) {
+		resetSubMenus();
+	}
+}
+
+function showSubMenu(hasChildren) {
+	const subMenu = hasChildren.querySelector(".sub-menu");
+	if (!subMenu) return;
+
+	subMenu.classList.add("active");
+	subMenu.style.animation = "slideLeft 0.5s ease forwards";
+
+	// заголовок = текст родителя (без <i>)
+	const title = hasChildren.querySelector("i")
+		? hasChildren.querySelector("i").parentNode.childNodes[0].textContent.trim()
+		: hasChildren.childNodes[0].textContent.trim();
+
+	subMenuStack.push({ element: subMenu, title });
+
+	menuTitle.textContent = title;
+	menuHead.classList.add("active");
+}
+
+function hideSubMenu() {
+	if (subMenuStack.length === 0) return;
+
+	const { element } = subMenuStack.pop();
+	element.style.animation = "slideRight 0.5s ease forwards";
+
+	setTimeout(() => {
+		element.classList.remove("active");
+	}, 300);
+
+	// если стек пуст → убираем заголовок
+	if (subMenuStack.length === 0) {
+		menuTitle.textContent = "";
+		menuHead.classList.remove("active");
+	} else {
+		// иначе показываем заголовок предыдущего уровня
+		menuTitle.textContent = subMenuStack[subMenuStack.length - 1].title;
+	}
+}
+
+function resetSubMenus() {
+	subMenuStack.forEach(({ element }) => element.classList.remove("active"));
+	subMenuStack = [];
+	menuTitle.textContent = "";
+	menuHead.classList.remove("active");
+}
+
+window.onresize = function () {
+	if (this.innerWidth > 991 && menu.classList.contains("active")) {
+		toggleMenu();
+	}
+};
 
 // Поиск ====================================
 const searchForm = document.querySelector(".header__search .b-search");
