@@ -108,235 +108,296 @@
                         </form>
                     </div>
                 </div>
-
-
-
-
                 <button class="btn-call" data-call>записаться на прием</button>
             </div>
         </div>
     </div>
 </header>
 
-<div class="mobile-menu">
-    <div class="menu-mobile__overlay"></div>
-    <div class="menu-mobile">
-        <div class="menu-mobile__header">
-            <span class="name">меню</span>
-            <button type="button" class="close">
+
+<div class="mobile">
+    <div class="menu-overlay">
+    </div>
+    <nav class="mobile-menu">
+        <div class="mobile-menu-head">
+            <div class="mobile-menu-name">
+                Меню
+            </div>
+            <div class="go-back">
+                <i class="icon">
+                    <svg>
+                        <use xlink:href="@img/icons/sprite.svg#arrow-slider"></use>
+                    </svg>
+                </i>
+            </div>
+            <div class="current-menu-title"></div>
+            <div class="mobile-menu-close">
                 <span class="icon">
                     <svg>
                         <use xlink:href="@img/icons/sprite.svg#close"></use>
                     </svg>
                 </span>
-            </button>
-        </div>
-        <div class="menu-mible__search">
-            <div class="b-search">
-                <form class="b-search__form">
-                    <div class="b-search__icon">
-                        <button type="submit" class="btn-search">
-                            <svg>
-                                <use xlink:href="@img/icons/sprite.svg#search"></use>
-                            </svg>
-                        </button>
-                    </div>
-
-                    <label class="input--search">
-                        <input type="search" class="input__field" placeholder="Поиск..." required="">
-                    </label>
-                </form>
             </div>
         </div>
-        <nav class="menu-mobile__body">
-            <ul class="menu-mobile__list">
-                <li>
-                    <a href="">
-                        <span>ЛЕЧЕНИЕ</span>
-                        <span class="arrow">
+        <div class="mobile-wrapper">
+            <div class="menu-mobile__search">
+                <div class="b-search">
+                    <form class="b-search__form">
+                        <div class="b-search__icon">
+                            <button type="submit" class="btn-search">
+                                <svg>
+                                    <use xlink:href="@img/icons/sprite.svg#search"></use>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <label class="input--search">
+                            <input type="search" class="input__field" placeholder="Поиск..." required="">
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <ul class="menu-main">
+                <li class="menu-item-has-children">
+                    <a href="#">
+                        ЛЕЧЕНИЕ
+                        <i class="icon">
                             <svg>
                                 <use xlink:href="@img/icons/sprite.svg#arrow-slider"></use>
                             </svg>
-                        </span>
+                        </i>
                     </a>
-                    <ul class="sub-menu">
-                        <li><a href=""><span>Лечение кариеса</span></a></li>
-                        <li><a href=""><span>лечение пульпита</span></a></li>
-                        <li><a href=""><span>лечение периодонтита</span></a></li>
-                        <li><a href=""><span>лечение кисты зуба</span></a></li>
-                        <li><a href=""><span>пломбирование зубов</span></a></li>
-                        <li><a href=""><span>пломбирование каналов</span></a></li>
-                        <li><a href=""><span>лечение под микроскопом</span></a></li>
-                        <li><a href=""><span>эндодонтия</span></a></li>
-                        <li><a href=""><span>перелечивание зуба</span></a></li>
-                    </ul>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="#">Лечение кариеса</a></li>
+                            <li><a href="#">Лечение пульпита</a></li>
+                            <li><a href="#">Лечение периодонтита</a></li>
+                            <li><a href="#">Лечение кисты зуба</a></li>
+                            <li><a href="#">Пломбирование зубов</a></li>
+                            <li><a href="#">Пломбирование каналов</a></li>
+                            <li><a href="#">Лечение под микроскопом</a></li>
+                            <li><a href="#">Эндодонтия</a></li>
+                            <li><a href="#">Перелечивание зуба</a></li>
+                        </ul>
+                    </div>
                 </li>
-                <li>
-                    <a href="">
-                        <span>УДАЛЕНИЕ</span>
-                        <span class="arrow">
+                <li class="menu-item-has-children">
+                    <a href="#">
+                        УДАЛЕНИЕ
+                        <i class="icon">
                             <svg>
                                 <use xlink:href="@img/icons/sprite.svg#arrow-slider"></use>
                             </svg>
-                        </span>
+                        </i>
                     </a>
-                    <ul class="sub-menu">
-                        <li><a href=""><span>Удаление зуба мудрости</span></a></li>
-                        <li><a href=""><span>Удаление ретинированного зуба</span></a></li>
-                        <li><a href=""><span>Удаление подвижного зуба</span></a></li>
-                        <li><a href=""><span>Реплантация зубов</span></a></li>
-                    </ul>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="#">Удаление зуба мудрости</a></li>
+                            <li><a href="#">Удаление ретинированного зуба</a></li>
+                            <li><a href="#">Удаление подвижного зуба</a></li>
+                            <li><a href="#">Реплантация зубов</a></li>
+                        </ul>
+                    </div>
                 </li>
-                <li>
-                    <a href="">
-                        <span>ПРОТЕЗИРОВАНИЕ</span>
-                        <span class="arrow">
+                <li class="menu-item-has-children">
+                    <a href="#">
+                        ПРОТЕЗИРОВАНИЕ
+                        <i class="icon">
                             <svg>
                                 <use xlink:href="@img/icons/sprite.svg#arrow-slider"></use>
                             </svg>
-                        </span>
+                        </i>
                     </a>
-                    <ul class="sub-menu">
-                        <li><a href=""><span>Протезирование зубов на имплантатах</span></a></li>
-                        <li><a href=""><span>Акриловые протезы</span></a></li>
-                        <li><a href=""><span>Бюгельные протезы</span></a></li>
-                        <li><a href=""><span>Мостовидные протезы</span></a></li>
-                        <li><a href=""><span>Съемные зубные протезы</span></a></li>
-                        <li><a href=""><span>Временные коронки на имплантатах</span></a></li>
-                    </ul>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="#">Протезирование зубов на имплантатах</a></li>
+                            <li><a href="#">Акриловые протезы</a></li>
+                            <li><a href="#">Бюгельные протезы</a></li>
+                            <li><a href="#">Мостовидные протезы</a></li>
+                            <li><a href="#">Съемные зубные протезы</a></li>
+                            <li><a href="#">Временные коронки на имплантатах</a></li>
+                        </ul>
+                    </div>
                 </li>
-                <li>
-                    <a href="">
-                        <span>КОРОНКИ</span>
-                        <span class="arrow">
+                <li class="menu-item-has-children">
+                    <a href="#">
+                        КОРОНКИ
+                        <i class="icon">
                             <svg>
                                 <use xlink:href="@img/icons/sprite.svg#arrow-slider"></use>
                             </svg>
-                        </span>
+                        </i>
                     </a>
-                    <ul class="sub-menu">
-                        <li><a href=""><span>Пластмассовые (временные) коронки</span></a></li>
-                    </ul>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="#">Пластмассовые (временные) коронки</a></li>
+                            <li><a href="#">Металлокерамические коронки</a></li>
+                            <li><a href="#">Циркониевые коронки</a></li>
+                            <li><a href="#">Безметалловые коронки</a></li>
+                            <li><a href="#">Керамические коронки</a></li>
+                            <li><a href="#">коронки Е-МАХ</a></li>
+                        </ul>
+                    </div>
                 </li>
-                <li>
-                    <a href="">
-                        <span>ВИНИРЫ</span>
-                        <span class="arrow">
+                <li class="menu-item-has-children">
+                    <a href="#">
+                        ВИНИРЫ
+                        <i class="icon">
                             <svg>
                                 <use xlink:href="@img/icons/sprite.svg#arrow-slider"></use>
                             </svg>
-                        </span>
+                        </i>
                     </a>
-                    <ul class="sub-menu">
-                        <li><a href=""><span>Композитные виниры</span></a></li>
-                    </ul>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="#">Композитные виниры</a></li>
+                            <li><a href="#">Керамические виниры</a></li>
+                            <li><a href="#">Рефракторы (основная тема – телескопы, запрос Рефракторы зуб – 2 в
+                                    месяц)</a>
+                            </li>
+                            <li><a href="#">Нановиниры (1 показ в месяц)</a></li>
+                        </ul>
+                    </div>
                 </li>
-                <li>
-                    <a href="">
-                        <span>ИМПЛАНТАЦИЯ</span>
-                        <span class="arrow">
+                <li class="menu-item-has-children">
+                    <a href="#">
+                        ИМПЛАНТАЦИЯ
+                        <i class="icon">
                             <svg>
                                 <use xlink:href="@img/icons/sprite.svg#arrow-slider"></use>
                             </svg>
-                        </span>
+                        </i>
                     </a>
-                    <ul class="sub-menu">
-                        <li><a href=""><span>Имплантация All-on-4</span></a></li>
-                    </ul>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="#">Имплантация All-on-4</a></li>
+                            <li><a href="#">Имплантация All-on-6</a></li>
+                            <li><a href="#">Имплантаты Osstem</a></li>
+                            <li><a href="#">Имплантаты Astra</a></li>
+                        </ul>
+                    </div>
                 </li>
-                <li>
-                    <a href="">
-                        <span>КОСТНАЯ И ДЕСНЕВАЯ ПЛАСТИКА ПРИ ИМПЛАНТАЦИИ</span>
-                        <span class="arrow">
+                <li class="menu-item-has-children">
+                    <a href="#">
+                        КОСТНАЯ И ДЕСНЕВАЯ ПЛАСТИКА ПРИ ИМПЛАНТАЦИИ
+                        <i class="icon">
                             <svg>
                                 <use xlink:href="@img/icons/sprite.svg#arrow-slider"></use>
                             </svg>
-                        </span>
+                        </i>
                     </a>
-                    <ul class="sub-menu">
-                        <li><a href=""><span>Открытый синуслифтинг</span></a></li>
-                    </ul>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="#">Открытый синуслифтинг</a></li>
+                            <li><a href="#">Закрытый синуслифтинг</a></li>
+                            <li><a href="#">Костная пластика</a></li>
+                            <li><a href="#">Направленная костная регенерация (НКР)</a></li>
+                            <li><a href="#">Костная редукция</a></li>
+                            <li><a href="#">Пластика десны</a></li>
+                        </ul>
+                    </div>
                 </li>
-                <li>
-                    <a href="">
-                        <span>ПАРОДОНТОЛОГИЯ</span>
-                        <span class="arrow">
+                <li class="menu-item-has-children">
+                    <a href="#">
+                        ПАРОДОНТОЛОГИЯ
+                        <i class="icon">
                             <svg>
                                 <use xlink:href="@img/icons/sprite.svg#arrow-slider"></use>
                             </svg>
-                        </span>
+                        </i>
                     </a>
-                    <ul class="sub-menu">
-                        <li><a href=""><span>Лечение пародонтита</span></a></li>
-                    </ul>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="#">Лечение пародонтита</a></li>
+                            <li><a href="#">Лечение пародонтоза</a></li>
+                            <li><a href="#">Лечение гингивита</a></li>
+                            <li><a href="#">Лечение стоматита</a></li>
+                            <li><a href="#">Гингивопластика</a></li>
+                            <li><a href="#">Шинирование зубов</a></li>
+                            <li><a href="#">Кюртаж зубов</a></li>
+                        </ul>
+                    </div>
                 </li>
-                <li>
-                    <a href="">
-                        <span>ОРТОДОНТИЯ</span>
-                        <span class="arrow">
+                <li class="menu-item-has-children">
+                    <a href="#">
+                        ОРТОДОНТИЯ
+                        <i class="icon">
                             <svg>
                                 <use xlink:href="@img/icons/sprite.svg#arrow-slider"></use>
                             </svg>
-                        </span>
+                        </i>
                     </a>
-                    <ul class="sub-menu">
-                        <li><a href=""><span>Исправление прикуса</span></a></li>
-                    </ul>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="#">Исправление прикуса</a></li>
+                            <li><a href="#">Брекеты</a></li>
+                            <li><a href="#">Эйлайнеры</a></li>
+                            <li><a href="#">Апрайтинг зубов</a></li>
+                            <li><a href="#">Дистализация зубов</a></li>
+                            <li><a href="#">Ортодонтическое вколачивание зубов</a></li>
+                            <li><a href="#">Установка ортодонтических имплантатов</a></li>
+                            <li><a href="#">Детская ортодонтия</a></li>
+                            <li><a href="#">Каппы и пластинки</a></li>
+                            <li><a href="#">Ретейнеры</a></li>
+                            <li><a href="#">Трейнеры для зубов </a></li>
+                        </ul>
+                    </div>
                 </li>
+            </ul>
+            <ul class="menu-main">
+                <li class="menu-item-has-children">
+                    <a href="#">
+                        О КЛИНИКЕ
+                        <i class="icon">
+                            <svg>
+                                <use xlink:href="@img/icons/sprite.svg#arrow-slider"></use>
+                            </svg>
+                        </i>
+                    </a>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="#">Лицензия и сертификаты</a></li>
+                            <li><a href="#">Возврат 13% НДФЛ</a></li>
+                            <li><a href="#">Виды оплаты</a></li>
+                            <li><a href="#">Положение об оплате</a></li>
+                            <li><a href="#">Положение о гарантиях</a></li>
+                            <li><a href="#">Правила поведения пациентов и посетителей</a></li>
+                            <li><a href="#">Договор об оказании платных мед.услуг</a></li>
+                            <li><a href="#">Как добраться</a></li>
+                            <li><a href="#">График приема пациентов</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">ЦЕНЫ</a></li>
+                <li><a href="#">ВРАЧИ</a></li>
+                <li><a href="#">ФОТО РАБОТ</a></li>
+                <li><a href="#">АКЦИИ</a></li>
+                <li><a href="#">ОТЗЫВЫ</a></li>
+                <li><a href="#">БЛОГ</a></li>
+                <li><a href="#">КОНТАКТЫ</a></li>
 
             </ul>
-        </nav>
-        <nav class="menu-mobile__body">
-            <ul class="menu-mobile__list">
-                <li>
-                    <a href="">
-                        <span>О клинике</span>
-                        <span class="arrow">
-                            <svg>
-                                <use xlink:href="@img/icons/sprite.svg#arrow-slider"></use>
-                            </svg>
-                        </span>
-                    </a>
-                    <ul class="sub-menu">
-                        <li><a href=""><span>Лицензия и сертификаты</span></a></li>
-                        <li><a href=""><span>Возврат 13% НДФЛ</span></a></li>
-                        <li><a href=""><span>Виды оплаты</span></a></li>
-                        <li><a href=""><span>Положение об оплате</span></a></li>
-                        <li><a href=""><span>Положение о гарантиях</span></a></li>
-                        <li><a href=""><span>Правила поведения пациентов и посетителей</span></a></li>
-                        <li><a href=""><span>Договор об оказании платных мед.услуг</span></a></li>
-                        <li><a href=""><span>Как добраться</span></a></li>
-                        <li><a href=""><span>График приема пациентов</span></a></li>
-                    </ul>
-                </li>
-                <li><a href=""><span>Цены</span></a></li>
-                <li><a href=""><span>Врачи</span></a></li>
-                <li><a href=""><span>фото работ</span></a></li>
-                <li><a href=""><span>акции</span></a></li>
-                <li><a href=""><span>отзывы</span></a></li>
-                <li><a href=""><span>блог</span></a></li>
-                <li><a href=""><span>контакты</span></a></li>
-            </ul>
-        </nav>
-        <div class="menu-mobile__contacts">
-            <a href="https://wa.me/78127700808" class="link" target="_blank" rel="noopener noreferrer nofollow"
-                title="Наш Whatsapp">
-                <span class="icon">
-                    <svg>
-                        <use xlink:href="@img/icons/sprite.svg#wa"></use>
-                    </svg>
-                </span>
-                <span class="text">Связаться в Whatsapp</span>
-            </a>
-            <a href="tel:+78127700808" class="header__phone">
-                <span class="icon">
-                    <svg>
-                        <use xlink:href="@img/icons/sprite.svg#phone"></use>
-                    </svg>
-                </span>
-                <span class="text">+7 (812) 770-08-08</span>
-            </a>
-            <button type="button" class="link">Заказать обратный звонок</button>
+            <div class="menu-mobile__contacts">
+                <a href="https://wa.me/78127700808" class="link" target="_blank" rel="noopener noreferrer nofollow"
+                    title="Наш Whatsapp">
+                    <span class="icon">
+                        <svg>
+                            <use xlink:href="@img/icons/sprite.svg#wa"></use>
+                        </svg>
+                    </span>
+                    <span class="text">Связаться в Whatsapp</span>
+                </a>
+                <a href="tel:+78127700808" class="header__phone">
+                    <span class="icon">
+                        <svg>
+                            <use xlink:href="@img/icons/sprite.svg#phone"></use>
+                        </svg>
+                    </span>
+                    <span class="text">+7 (812) 770-08-08</span>
+                </a>
+                <button type="button" class="link">Заказать обратный звонок</button>
+            </div>
         </div>
-    </div>
+    </nav>
+
 </div>
